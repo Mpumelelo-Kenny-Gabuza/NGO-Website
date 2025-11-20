@@ -1,0 +1,130 @@
+/* STYLES FOR DONATE PAGE ONLY */
+
+/* HERO SECTION */
+.donate_hero-section {
+    height: 20vh;
+    background: linear-gradient(135deg, #1d364e 10%, #363636 100%);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.donate_hero-content {
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.donate_heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    /* Sets the width of the outline */
+    -webkit-text-stroke-color: #eceef0;
+    /* Sets the color of the outline */
+    /* Example font size for better visibility */
+    font-weight: bold;
+}
+
+.hero_heading {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+    .hero_heading {
+        font-size: 2rem;
+    }
+
+    .hero_subheading {
+        font-size: 1rem;
+    }
+
+    .hero_buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+.donate_section {
+    margin: 2rem 10rem;
+    /* background: red; */
+}
+
+.donate_title {
+    text-align: center;
+    color: grey;
+    font-size: 1rem;
+    padding-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.donate_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.donate_card {
+    padding: 10px;
+    border-radius: 10px;
+    background: #eceef0;
+}
+
+.payment_logo {
+    margin-left: 5px;
+}
+
+.payment_logo img {
+    width: 100%;
+    /* height: 60%; */
+    /* height: 90px; */
+    border-radius: 10px;
+}
+
+.payment_details {
+    padding: 10px;
+}
+
+.payment_details > a {
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: #1d364e;
+    color: #eceef0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.method_name {
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.method_description li {
+    font-size: 1rem;
+    list-style: none;
+}

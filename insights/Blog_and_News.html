@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/f35d4106a4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/base_styles.css">
+  <title>Social Impact Blog & News</title>
+
+  <style>
+    header {
+      height: 20vh;
+      background: linear-gradient(135deg, #1d364e 10%, #363636 100%);
+      background-size: cover;
+      background-position: bottom;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      /* animation: fadeIn 1s ease-out; */
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-align: center;
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      /* Sets the width of the outline */
+      -webkit-text-stroke-color: #eceef0;
+      /* Sets the color of the outline */
+      /* Example font size for better visibility */
+      font-weight: bold;
+    }
+
+    /* header p {
+      font-size: 1rem;
+      opacity: 0.95;
+    } */
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(40px);
+      /* transition: all 0.8s ease-out; */
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2.section-title {
+      border-left: 6px solid #1d364e;
+      padding-left: 12px;
+      margin-bottom: 1.5rem;
+      color: #1d364e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2.section-title i {
+      color: #1d364e;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #1d364e;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    /* NEWSLETTER */
+    .newsletter {
+      text-align: center;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .newsletter p {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .newsletter input[type="email"] {
+      width: 60%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .newsletter input:focus {
+      border-color: #1d364e;
+      outline: none;
+    }
+
+    .newsletter button {
+      background: #1d364e;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .newsletter button:hover {
+      background: #1d364e;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR SECTION -->
+  <div class="navbar_section">
+    <div class="navbar_container">
+      <div class="navbar_logo">
+        <div class="navbar_text"><a href="homepage.html"></a>MMD</div>
+      </div>
+
+      <div class="navbar_socials">
+        <a href="" class="social_icon"><i class="fa fa-map-marker"></i></a>
+        <a href="" class="social_icon"><i class="fa fa-facebook-square"></i></a>
+        <a href="" class="social_icon"><i class="fa fa-linkedin-square"></i></a>
+        <a href="" class="social_icon"><i class="fa fa-instagram"></i></a>
+        <a href="tel:+2773 782 9075" class="navbar_contact">073 782 9075</a>
+      </div>
+
+      <!-- HAMBURGER MENU -->
+      <div class="navbar_toggle" id="mobile-menu">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="navbar_links" id="navbar-links">
+      <ul class="nav_menu">
+        <li><a href="/homepage.html" class="nav_link" >Home</a></li>
+        <li><a href="/about_us.html" class="nav_link">About Us</a></li>
+
+        <!-- Programmes Dropdown -->
+        <li class="nav_dropdown">
+          <a href="" class="nav_link dropdown_toggle">Programmes <span>&#9662;</span></a>
+          <ul class="dropdown_menu">
+            <li><a href="/programmes/Gender_Based_Violence.html">Gender Based Violence</a></li>
+            <li><a href="/programmes/Mental_Health.html">Mental Health</a></li>
+            <li><a href="/programmes/Sustainable_Livelyhoods.html">Sustainable Livelihoods</a></li>
+            <li><a href="/programmes/Male_Circumsition.html">Male Circumsition</a></li>
+          </ul>
+        </li>
+
+        <!-- Resources Dropdown -->
+        <!-- <li class="nav_dropdown">
+                    <a href="" class="nav_link dropdown_toggle">Resources</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="#news-blogs">Keep Yourself Save</a></li>
+                        <li><a href="#news-blogs">Facts about Abuse</a></li>
+                    </ul>
+                </li> -->
+
+        <!-- Insight Dropdown -->
+        <li class="nav_dropdown">
+          <a href="#" class="nav_link dropdown_toggle" style="color: #c0392b;">Insights <span>&#9662;</span></a>
+          <ul class="dropdown_menu">
+            <li><a href="/insights/Blog_and_News.html"  style="background-color: #c0392b; color: #fff;" >News</a></li>
+            <li><a
+                href="https://blogs.worldbank.org/en/voices/going-to-the-root-of-inequality-to-end-gender-based-violence">Blogs</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- <li><a href="about_us.html" class="nav_link">About Us</a></li> -->
+      </ul>
+
+      <div class="navbar_buttons">
+        <button class="nav_btn help_btn">FIND SUPPORT</button>
+        <button class="nav_btn donate_btn"><a href="/donate.html"><i class="fa-solid fa-heart"></i> &nbsp;
+            DONATE</a></button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <h1><i class="fa-solid fa-newspaper"></i> News and Blogs</h1>
+    <!-- <p>Inspiring updates from Soul City, Saartjie Baartman Centre & TEARS Foundation</p> -->
+  </header>
+
+  <div class="container">
+    <!-- Last Updates -->
+    <section id="updates">
+      <h2 class="section-title"><i class="fa-solid fa-newspaper"></i> Last Updates</h2>
+      <div class="card">
+        <h3><i class="fa-solid fa-seedling"></i> 30 Years of Impact – Soul City Institute</h3>
+        <p>Celebrating three decades of transformative work in feminist advocacy, youth empowerment, and health
+          awareness.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-handshake-angle"></i> Collaborating with the Kolisi Foundation</h3>
+        <p>Saartjie Baartman Centre joins forces with the Kolisi Foundation to strengthen survivor support programs.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-heart"></i> TEARS Foundation Expands Services</h3>
+        <p>New mobile response units reach remote communities to assist survivors of gender-based violence.</p>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="stories">
+      <h2 class="section-title"><i class="fa-solid fa-trophy"></i> Success Stories</h2>
+      <div class="card">
+        <h3><i class="fa-solid fa-users"></i> Empowering Young Women Leaders</h3>
+        <p>Mentorship programs help dozens of young women step into leadership roles across rural communities.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-star"></i> From Survivor to Advocate</h3>
+        <p>Meet a woman who turned her pain into purpose — now leading campaigns for awareness and justice.</p>
+      </div>
+    </section>
+
+    <!-- Program Milestones -->
+    <section id="milestones">
+      <h2 class="section-title"><i class="fa-solid fa-flag-checkered"></i> Program Milestones</h2>
+      <div class="card">
+        <h3><i class="fa-solid fa-certificate"></i> Khuseleka Accreditation Achievement</h3>
+        <p>Saartjie Baartman Centre officially recognized as a National Khuseleka One Stop Centre — a model for holistic
+          care.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-tv"></i> Streaming Soul City Classics</h3>
+        <p>Iconic Soul City programs return on SABC Plus — reigniting social change through powerful storytelling.</p>
+      </div>
+    </section>
+
+    <!-- Community Spotlights -->
+    <section id="community">
+      <h2 class="section-title"><i class="fa-solid fa-people-group"></i> Community Spotlights</h2>
+      <div class="card">
+
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-brain"></i> Mental Health Awareness Workshops</h3>
+        <p>TEARS Foundation leads sessions on trauma recovery and emotional resilience in underserved areas.</p>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section id="newsletter">
+      <h2 class="section-title"><i class="fa-solid fa-envelope-open-text"></i> Subscribe to Our Newsletter</h2>
+      <div class="newsletter">
+        <p>Stay connected for inspiring stories, new programs, and community initiatives.</p>
+        <form id="newsletterForm">
+          <input type="email" id="email" placeholder="Enter your email address" required />
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site_footer">
+    <div class="footer_container">
+
+      <!-- Main Footer Content -->
+      <div class="footer_main">
+
+        <!-- Organization Info -->
+        <div class="footer_column">
+          <div class="footer_logo">
+            <h2 class="logo_text">MMD</h2>
+            <span class="logo_subtitle">Manyana Mhlali Development</span>
+          </div>
+        </div>
+
+        <!-- Programmes -->
+        <div class="footer_column">
+          <h3 class="footer_heading">Our Programmes</h3>
+          <ul class="footer_links">
+            <li><a href="#gbv">Gender-Based Violence Prevention</a></li>
+            <li><a href="#mental-health">Mental Health Support</a></li>
+            <li><a href="#circumcision">Safe Male Circumcision</a></li>
+            <li><a href="#livelihoods">Sustainable Livelihoods</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Governance -->
+        <div class="footer_column">
+          <h3 class="footer_heading">Legal & Governance</h3>
+          <ul class="footer_links">
+            <li><a href="#constitution">Our Constitution</a></li>
+            <li><a href="#governance">Governing Board</a></li>
+            <li><a href="#financials">Financial Reports</a></li>
+            <li><a href="#policies">Policies</a></li>
+            <li><a href="#pbo">PBO Status</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer_bottom">
+        <div class="footer_bottom_content">
+          <div class="copyright">
+            <p>&copy; 2025 Manyana Mhlali Development NPC. All rights reserved.</p>
+          </div>
+
+          <!-- <div class="footer_legal">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div> -->
+
+          <div class="credit">
+            <p>Website Developed by <a href="http://" target="_blank" rel="noopener noreferrer">MLIFI
+                SOLUTIONS</a></p>
+            <!-- <p>Registered Non-Profit Company | Section 18A Approved</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Newsletter signup
+    document.getElementById("newsletterForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      if (email) {
+        alert(`Thank you for subscribing, ${email}!`);
+        document.getElementById("email").value = "";
+      }
+    });
+
+    // Scroll animation
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/f35d4106a4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/base_styles.css">
+  <title>Male Circumcision Program</title>
+
+  <style>
+    header {
+      height: 20vh;
+      background: linear-gradient(135deg, #1d364e 10%, #838181 100%);
+      background-size: cover;
+      background-position: bottom;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-align: center;
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      /* Sets the width of the outline */
+      -webkit-text-stroke-color: #eceef0;
+      /* Sets the color of the outline */
+      /* Example font size for better visibility */
+      font-weight: bold;
+    }
+
+    /* header p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #b2dfdb;
+    } */
+
+    .program-container {
+      width: 85%;
+      max-width: 950px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-header {
+      background:  #2c3e50;
+      color: #fff;
+      cursor: pointer;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: 0.3s;
+    }
+
+    .accordion-header:hover {
+      background:  #2c3e50;
+    }
+
+    .accordion-header .icon-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .accordion-header i:first-child {
+      font-size: 20px;
+      color: #e74c3c;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header:hover i:first-child {
+      transform: scale(1.1);
+      color: #e74c3c;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+      font-size: 14px;
+    }
+
+    .accordion-icon.rotate {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      display: none;
+      background-color: #b4b3b3;
+      padding: 20px 25px;
+      line-height: 1.7;
+      font-size: 15px;
+      color: #444;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .accordion-item.active .accordion-header {
+      background:  #2c3e50;
+    }
+
+    /* Extra informational section */
+    .info-section {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(90deg,  #2c3e50,  #4c5055);
+      color: #fff;
+    }
+
+    .info-section h2 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .info-section p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #b2dfdb;
+    }
+
+    /* Highlight cards */
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .highlight-card {
+      background: #fff;
+      width: 250px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .highlight-card i {
+      background:  #2c3e50;
+      color: #e74c3c;
+      font-size: 24px;
+      padding: 14px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      transition: 0.3s ease;
+    }
+
+    .highlight-card:hover i {
+      background:  #2c3e50;
+      color: #e74c3c;
+      transform: rotate(10deg);
+    }
+
+    .highlight-card h3 {
+      font-size: 1.1rem;
+      color:  #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .highlight-card p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR SECTION -->
+  <div class="navbar_section">
+    <div class="navbar_container">
+      <div class="navbar_logo">
+        <div class="navbar_text"><a href="homepage.html"></a>MMD</div>
+      </div>
+
+      <div class="navbar_socials">
+        <a href="" class="social_icon"><i class="fa fa-map-marker"></i></a>
+        <a href="" class="social_icon"><i class="fa fa-facebook-square"></i></a>
+        <a href="" class="social_icon"><i class="fa fa-linkedin-square"></i></a>
+        <a href="" class="social_icon"><i class="fa fa-instagram"></i></a>
+        <a href="tel:+2773 782 9075" class="navbar_contact">073 782 9075</a>
+      </div>
+
+      <!-- HAMBURGER MENU -->
+      <div class="navbar_toggle" id="mobile-menu">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="navbar_links" id="navbar-links">
+      <ul class="nav_menu">
+        <li><a href="/homepage.html" class="nav_link">Home</a></li>
+        <li><a href="/about_us.html" class="nav_link">About Us</a></li>
+
+        <!-- Programmes Dropdown -->
+        <li class="nav_dropdown">
+          <a href="" class="nav_link dropdown_toggle"  style="color: #c0392b;">Programmes <span>&#9662;</span></a>
+          <ul class="dropdown_menu">
+            <li><a href="/programmes/Gender_Based_Violence.html">Gender Based Violence</a></li>
+            <li><a href="/programmes/Mental_Health.html">Mental Health</a></li>
+            <li><a href="/programmes/Sustainable_Livelyhoods.html">Sustainable Livelihoods</a></li>
+            <li><a href="/programmes/Male_Circumsition.html" style="background-color: #c0392b; color: #fff;">Male Circumsition</a></li>
+          </ul>
+        </li>
+
+        <!-- Resources Dropdown -->
+        <!-- <li class="nav_dropdown">
+                    <a href="" class="nav_link dropdown_toggle">Resources</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="#news-blogs">Keep Yourself Save</a></li>
+                        <li><a href="#news-blogs">Facts about Abuse</a></li>
+                    </ul>
+                </li> -->
+
+        <!-- Insight Dropdown -->
+        <li class="nav_dropdown">
+          <a href="#" class="nav_link dropdown_toggle">Insights <span>&#9662;</span></a>
+          <ul class="dropdown_menu">
+            <li><a href="/insights/Blog_and_News.html">News</a></li>
+            <li><a
+                href="https://blogs.worldbank.org/en/voices/going-to-the-root-of-inequality-to-end-gender-based-violence">Blogs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="navbar_buttons">
+        <button class="nav_btn help_btn">FIND SUPPORT</button>
+        <button class="nav_btn donate_btn"><a href="/donate.html"><i class="fa-solid fa-heart"></i> &nbsp;
+            DONATE</a></button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <h1>Male Circumcision Program</h1>
+    <p>Promoting Health, Culture, and Education Through Safe Initiation</p>
+  </header>
+
+  <section class="program-container">
+    <!-- SAFE INITIATION -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <div class="icon-wrap">
+          <i class="fa-solid fa-user-shield"></i> Safe Initiation
+        </div>
+        <i class="fa-solid fa-angle-right accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          The Safe Initiation initiative ensures that traditional practices are carried out in
+          a clean and medically supervised environment. Our focus is on the physical safety of initiates,
+          the prevention of infections, and the promotion of post-initiation healing.
+        </p>
+      </div>
+    </div>
+
+    <!-- TRADITIONAL PRACTICES -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <div class="icon-wrap">
+          <i class="fa-solid fa-landmark"></i> Traditional Practices
+        </div>
+        <i class="fa-solid fa-angle-right accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          Respect for culture and tradition remains at the heart of this program. We work closely with
+          traditional leaders, families, and health professionals to maintain the integrity of customs
+          while aligning them with modern safety standards.
+        </p>
+      </div>
+    </div>
+
+    <!-- HEALTHY EDUCATION -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <div class="icon-wrap">
+          <i class="fa-solid fa-heart-pulse"></i> Healthy Education
+        </div>
+        <i class="fa-solid fa-angle-right accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          Healthy Education empowers young men with essential life skills—covering hygiene,
+          mental wellness, and responsible living. Through workshops and community engagement,
+          we promote informed, confident, and health-conscious adulthood.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMATION SECTION -->
+  <section class="info-section">
+    <h2>About the Program</h2>
+    <p>
+      This program was established to strengthen the link between traditional practices and public health.
+      It provides education, support, and training to ensure that every participant experiences
+      a safe, meaningful, and empowering initiation journey.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHT CARDS -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <i class="fa-solid fa-hands-helping"></i>
+      <h3>Community Support</h3>
+      <p>
+        We partner with local leaders and families to ensure
+        every initiate receives proper guidance and community care.
+      </p>
+    </div>
+
+    <div class="highlight-card">
+      <i class="fa-solid fa-user-doctor"></i>
+      <h3>Medical Assistance</h3>
+      <p>
+        Professional healthcare workers monitor safety procedures
+        and provide medical assistance during and after initiation.
+      </p>
+    </div>
+
+    <div class="highlight-card">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h3>Knowledge & Awareness</h3>
+      <p>
+        Educational programs teach initiates about self-respect, hygiene,
+        and discipline for a brighter and healthier future.
+      </p>
+    </div>
+
+    <div class="highlight-card">
+      <i class="fa-solid fa-users-gear"></i>
+      <h3>Leadership Building</h3>
+      <p>
+        Encouraging responsibility and mentorship to produce young leaders
+        who contribute positively to their communities.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site_footer">
+    <div class="footer_container">
+
+      <!-- Main Footer Content -->
+      <div class="footer_main">
+
+        <!-- Organization Info -->
+        <div class="footer_column">
+          <div class="footer_logo">
+            <h2 class="logo_text">MMD</h2>
+            <span class="logo_subtitle">Manyana Mhlali Development</span>
+          </div>
+        </div>
+
+        <!-- Programmes -->
+        <div class="footer_column">
+          <h3 class="footer_heading">Our Programmes</h3>
+          <ul class="footer_links">
+            <li><a href="#gbv">Gender-Based Violence Prevention</a></li>
+            <li><a href="#mental-health">Mental Health Support</a></li>
+            <li><a href="#circumcision">Safe Male Circumcision</a></li>
+            <li><a href="#livelihoods">Sustainable Livelihoods</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Governance -->
+        <div class="footer_column">
+          <h3 class="footer_heading">Legal & Governance</h3>
+          <ul class="footer_links">
+            <li><a href="#constitution">Our Constitution</a></li>
+            <li><a href="#governance">Governing Board</a></li>
+            <li><a href="#financials">Financial Reports</a></li>
+            <li><a href="#policies">Policies</a></li>
+            <li><a href="#pbo">PBO Status</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer_bottom">
+        <div class="footer_bottom_content">
+          <div class="copyright">
+            <p>&copy; 2025 Manyana Mhlali Development NPC. All rights reserved.</p>
+          </div>
+
+          <!-- <div class="footer_legal">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div> -->
+
+          <div class="credit">
+            <p>Website Developed by <a href="http://" target="_blank" rel="noopener noreferrer">MLIFI
+                SOLUTIONS</a></p>
+            <!-- <p>Registered Non-Profit Company | Section 18A Approved</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach((header) => {
+      header.addEventListener("click", () => {
+        const currentItem = header.parentElement;
+        const icon = header.querySelector(".accordion-icon");
+
+        // Close other items
+        document.querySelectorAll(".accordion-item").forEach((item) => {
+          if (item !== currentItem) {
+            item.classList.remove("active");
+            item.querySelector(".accordion-content").style.display = "none";
+            item.querySelector(".accordion-icon").classList.remove("rotate");
+          }
+        });
+
+        // Toggle clicked item
+        currentItem.classList.toggle("active");
+        const content = currentItem.querySelector(".accordion-content");
+        icon.classList.toggle("rotate");
+
+        if (currentItem.classList.contains("active")) {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+  <script src="/script/programme_scripts/male_circumsition.js"></script>
+</body>
+
+</html>

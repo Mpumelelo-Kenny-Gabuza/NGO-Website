@@ -1,0 +1,50 @@
+.info-col h5 {
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.right-section {
+    margin-top: 124px;
+}
+
+.faq {
+    display: block;
+    width: 550px;
+    max-width: 95%;
+}
+
+.faq .content {
+    background-color: rgb(160, 153, 160);
+    color: black;
+    margin: 12px 0;
+    border-radius: 5px;
+    padding :12px 14px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.faq .content .gs {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.faq .content .gs  i{
+    margin-left: 4px;
+    margin-right: 8px;
+    color: white;
+}
+
+.faq .content .ans {
+    font-size: 17px;
+    font-weight: 400;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    pointer-events: none;
+}
+
+.content.active .ans {
+    max-height: 200px;
+    padding-top: 10px;
+}

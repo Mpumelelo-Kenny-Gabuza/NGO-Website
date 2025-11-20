@@ -1,0 +1,46 @@
+.methodology-section {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(#333, #121212);
+    color: rgb(247, 240, 240);
+    font-size: 15px;
+}
+.methodology-section h2 {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.methodology-section h6 {
+    text-align: left;
+    font-size: 13px;
+    color: rgb(201, 195, 195);
+    padding: 10px;
+}
+
+.method-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 20px;
+}
+
+.method-row .info-col {
+    padding: 10px;
+}
+
+.info-col h4 {
+    text-align: center;
+    padding-bottom: 12px;
+    color: magenta;
+    letter-spacing: 1px;
+}
+
+.method-row span{
+    font-style: italic;
+    color: grey;
+    font-size: small;
+    padding-top: 10px;
+}

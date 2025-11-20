@@ -1,0 +1,74 @@
+.services-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.services-container h1, h2{
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    text-shadow: magenta 1.2px 1px, cyan 1.2px 1px;
+}
+
+.services-container > p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+    color: gray;
+}
+
+.services-row a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.services-row a > h3 {
+    text-align: center;
+}
+
+.services-row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.services-row a > p {
+    font-size: 15px;
+}
+
+.service-col {
+    gap: 20px;
+    flex-basis: 31%;
+    background: rgb(252, 145, 252);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    transition: 0.5s;
+}
+
+.service-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.service-col > h3{
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 0 magenta;
+}
+
+.services-row > p {
+    line-height: 20px;
+    font-size: small;
+    color: #fff;
+}
+
+.service-col > ul > li {
+    list-style: none;
+}

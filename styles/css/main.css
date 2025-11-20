@@ -1,0 +1,198 @@
+@import './layout/header.css';
+@import './layout/hero.css';
+@import './layout/services_sec.css';
+@import './layout/recent_projects.css';
+@import './layout/image_slider.css';
+@import './layout/footer.css';
+@import './components/modal.css';
+@import './pages/contact.css';
+@import './components/last_update.css';
+
+@import './components/dev_method.css';
+@import './components/faq.css';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+.container {
+    padding: 1% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/* RESPONSIVE SECTION */
+
+@media (max-width: 700px) {
+    /* TOP NAVIGATION */
+    .top-navigation .close-icon {
+        display: block;
+        color: #fff;
+        margin: 8px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+        
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: magenta;
+        height: auto;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .nav-links ul li a {
+        color: black;
+        font-size: 15px;
+    }
+    .nav-links .contact-btn {
+        border: 1px solid white;
+        background: lightslategray;
+    }
+
+    /* HERO SECTION */
+    .hero-section > h1{
+        font-size: 28px;
+        text-align: center;
+    }
+    .hero-section p {
+        padding-top: 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .hero-section img {
+        display: none;
+    }
+    .hero-section > a {
+        margin-bottom: 10px;
+    }
+    
+
+    /* SERVICES */
+    .services-row {
+        flex-direction: column;
+    }
+
+    /* CALL TO ACTION */
+    .call-to-action h1 {
+        font-size: 22px;
+    }
+
+    /* DEV-METHODS */
+    .methodology-section  {
+        display: block;
+        padding-left: 80px;
+    }
+    .methodology-section h2 , h6 {
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 2x;
+        margin-left: -50px;
+    }
+    .methodology-section h6 {
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .method-row .info-col {
+        text-align: left;
+        font-size: 15px;
+    }
+    .method-row .info-col h4, h5 {
+        text-align: left;
+        font-size: 13px;
+        margin-left: -50px;
+    }
+    .method-row .info-col h5 {
+        font-size: 12px;
+    }
+
+    /* F.Q.Q's */
+    .right-section {
+        margin-top: 10px;
+    }
+    .faq .content {
+        margin-left: -22px;
+        /* margin: 12px 0; */
+        border-radius: 5px;
+        padding :12px 14px;
+        cursor: pointer;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .faq .content .gs h3 {
+        font-size: 14px;
+        font-variant: small-caps;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    /* PORTFOLION SECTION */
+    .portfolio h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .portfolio-container, .contact_section {
+        display: block;
+    }
+    
+    /* SERVICES */
+    header h1 {
+        font-size: 25px;
+    }
+    .services_container {
+        display: block;
+    }
+    .contact_side > h1 {
+        padding-top: 15px;
+    }
+    .contact_side > h1 {
+        text-align: center;
+        padding-top: 50px;
+    }
+    .form_container {
+        width: 100%;
+        padding: 20px;
+        margin-left: 20px;
+    }
+
+    /* CONTACT US */
+    .contact_leftside {
+        display: none;
+    }
+
+    /* ABOUT US */
+
+    footer {
+        font-size: small;
+    }
+}

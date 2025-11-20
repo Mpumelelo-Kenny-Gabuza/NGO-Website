@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.our_graphics {
+    padding: 40px;
+}
+
+.our_graphics > h1 {
+    font-variant: small-caps;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.our_graphics p {
+    color: grey;
+    font-size: small;
+}
+
+.graphics {
+    display: flex;
+}
+
+.graphics_container > .graphic {
+    display: flex;
+    gap: 10px;
+}
+
+.graphics_container > .graphic > img {
+    padding-left: 80px;
+    margin-left: 80px;
+    width: 60%;
+    height: 60%;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 2s ease-in-out;
+}
+
+.graphics_container > .graphic > img:hover {
+    transform: scale(1.2);
+}
+
+.graphics_container > .graphic > .grapc_img2 {
+    margin-left: 100px;
+} 
+
+.graphics_container > .graphic > h1 span{
+    color: grey;
+    font-size: small;
+    text-transform: lowercase;
+}
+
+.graphics_container > .graphic > h1 {
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: right;
+    writing-mode: vertical-rl;
+    font-weight: bolder;
+    padding-bottom: 60px;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 1.8px;
+}

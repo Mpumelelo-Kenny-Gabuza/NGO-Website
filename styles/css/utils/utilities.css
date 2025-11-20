@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+}
+
+.mt-5 {
+    margin-top: 4.5rem;
+}
+
+.bg-blue-100 {
+    background-color: #10a7e8;
+}

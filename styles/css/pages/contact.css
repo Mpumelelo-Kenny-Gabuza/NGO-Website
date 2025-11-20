@@ -1,0 +1,105 @@
+/* CONTACT STYLES */
+.contact {
+    background-color: rgb(36, 33, 33);
+}
+
+.contact h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.contact > .contact_section {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.contact > .contact_section > .contact_leftside {
+    padding-top: 20px;
+    margin-left: 30px;
+}
+
+.contact > .contact_section > .contact_leftside h1 {
+    padding-bottom: 5px;
+    font-size: 18px;
+    color: magenta;
+}
+
+.contact > .contact_section > .contact_leftside > p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    color: grey;
+}
+
+.contact_section > .contact_leftside > .details_container {
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    color: rgb(250, 246, 246);
+}
+
+.contact_section > .contact_leftside > .details_container span {
+    font-weight: 800;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+
+.contact_section > .contact_leftside > .details_container a {
+    text-decoration: none;
+    color: magenta;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.contact_section > .contact_leftside > .social_icons {
+    text-align: left;
+    font-size: 13px;
+    padding-top: 50px;
+}
+
+.contact_section > .contact_leftside > .social_icons > .socials_container > i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 8px;
+    width: 2rem;
+    height: 2rem;
+    background: lightblue;
+    border-radius: 50%;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: magenta;
+    background: #000;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+

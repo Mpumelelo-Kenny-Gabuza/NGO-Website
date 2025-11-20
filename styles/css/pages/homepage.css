@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Header style */
+.container {
+    padding: 1% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+/* SERVICES STYLES */
+.services-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    /* padding-top: 50px; */
+}
+
+.services-container > h1 , h2{
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    text-shadow: magenta 1.2px 1px, cyan 1.2px 1px;
+}
+
+.services-row a {
+    text-decoration: none;
+}
+
+.services-row a > p {
+    color: rgb(37, 37, 54);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.services-container > p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+    color: gray;
+}
+.services-row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-col > h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 0 magenta;
+}
+
+.service-col > p {
+    line-height: 22px;
+}
+
+.service-col {
+    gap: 20px;
+    flex-basis: 31%;
+    background: rgb(252, 145, 252);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    transition: 0.5s;
+}
+
+.service-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* METHODOLOGY SECTION */
+.methodology-section {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(#333, #121212);
+    color: rgb(247, 240, 240);
+    font-size: 15px;
+}
+.methodology-section h2 {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.methodology-section h6 {
+    text-align: left;
+    font-size: 13px;
+    color: rgb(201, 195, 195);
+    padding: 10px;
+}
+
+.method-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 20px;
+}
+
+.method-row .info-col {
+    padding: 10px;
+}
+
+.info-col h4 {
+    text-align: center;
+    padding-bottom: 12px;
+    color: magenta;
+    letter-spacing: 1px;
+}
+
+.methodology-section > .update_container {
+    background-color: lightsalmon !;
+}
+/* .method-row span{
+    font-style: italic;
+    color: grey;
+    font-size: small;
+    padding-top: 10px;
+} */
+
+
+/* FREQUENTLY ASKED Q's */
+
+.info-col h5 {
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.right-section {
+    margin-top: 124px;
+}
+
+.faq {
+    display: block;
+    width: 550px;
+    max-width: 95%;
+}
+
+.faq .content {
+    background-color: rgb(160, 153, 160);
+    color: black;
+    margin: 12px 0;
+    border-radius: 5px;
+    padding :12px 14px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.faq .content .gs {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.faq .content .gs  i{
+    margin-left: 4px;
+    margin-right: 8px;
+    color: white;
+}
+
+.faq .content .ans {
+    font-size: 17px;
+    font-weight: 400;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    pointer-events: none;
+}
+
+.content.active .ans {
+    max-height: 200px;
+    padding-top: 10px;
+}
+
+
+/* FOOTER */
+footer {
+    position: sticky;
+    bottom: 0;
+    font-size: small;
+    background: #000;
+    color: magenta;
+    font-variant: small-caps;
+}
+footer code a {
+    text-decoration: none;
+    color: rgb(250, 240, 240);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+.anim-para {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.7s linear forwards;
+}
+.anim-btn {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.8s linear forwards;
+}
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* RESPONSIVE SECTION */
+
+@media (max-width: 700px) {
+    /* TOP NAVIGATION */
+    .top-navigation .close-icon {
+        display: block;
+        color: #fff;
+        margin: 8px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+        
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: magenta;
+        height: auto;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .nav-links ul li a {
+        color: black;
+        font-size: 15px;
+    }
+    .nav-links .contact-btn {
+        border: 1px solid white;
+        background: lightslategray;
+    }
+
+    /* HERO SECTION */
+    .hero-section > h1{
+        font-size: 28px;
+        text-align: center;
+    }
+    .hero-section p {
+        padding-top: 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    /* .hero-section {
+        text-align: left;
+    } */
+
+    /* SERVICES */
+    .services-row {
+        flex-direction: column;
+    }
+
+    /* CALL TO ACTION */
+    .call-to-action h1 {
+        font-size: 22px;
+    }
+
+    /* DEV-METHODS */
+    .methodology-section  {
+        display: block;
+        padding-left: 80px;
+    }
+    .methodology-section h2 , h6 {
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 2x;
+        margin-left: -50px;
+    }
+    .methodology-section h6 {
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .method-row .info-col {
+        text-align: left;
+        font-size: 15px;
+    }
+    .method-row .info-col h4, h5 {
+        text-align: left;
+        font-size: 13px;
+        margin-left: -50px;
+    }
+    .method-row .info-col h5 {
+        font-size: 12px;
+    }
+
+    /* F.Q.Q's */
+    .right-section {
+        margin-top: 10px;
+    }
+    .faq .content {
+        margin-left: -22px;
+        /* margin: 12px 0; */
+        border-radius: 5px;
+        padding :12px 14px;
+        cursor: pointer;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .faq .content .gs h3 {
+        font-size: 14px;
+        font-variant: small-caps;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}

@@ -1,0 +1,17 @@
+/* can includes buttons, inputs, modals, 
+dropdowns, F-A-Qs and other unique components  */
+
+.btn {
+    display: block;
+    color: #fff;
+    border-color: transparent;
+}
+
+.btn--disabled {
+    pointer-events: none;
+}
+
+.btn--primary {
+    background-color: blue;
+    color: white;
+}
