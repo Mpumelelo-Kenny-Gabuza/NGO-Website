@@ -19,16 +19,15 @@ dropdowns.forEach(function (drop) {
 });
 
 // Add button functionality
-document.querySelector('.btn-primary').addEventListener('click', function () {
-    alert('Thank you for your interest in donating to Manyana Mhlali Development! You will now be redirected to our donation page.');
-    // In a real implementation, this would redirect to a donation page
-    window.location.href = '/donate.html';
-});
+// document.querySelector('.btn-primary').addEventListener('click', function () {
+//     alert('Thank you for your interest in donating to Manyana Mhlali Development! You will now be redirected to our donation page.');
+//     window.location.href = '/donate.html';
+// });
 
 document.querySelector('.btn-secondary').addEventListener('click', function () {
     alert('Thank you for your interest in getting involved with Manyana Mhlali Development! You will now be redirected to our volunteer page.');
     // In a real implementation, this would redirect to a volunteer page
-    // window.location.href = '/get-involved';
+    window.location.href = '/get-involved';
 });
 
 
@@ -105,6 +104,56 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Get modal and buttons
+const donationModal = document.getElementById('donationModal');
+const donateButtons = document.querySelectorAll('[href*="donate"], .donate-button'); // Adjust selector to match your donate button
+const closeButton = document.querySelector('.close-button');
+const cancelBtn = document.getElementById('cancelBtn');
+const proceedBtn = document.getElementById('proceedBtn');
+
+// Function to open modal
+function openDonationModal(event) {
+    event.preventDefault(); // Prevent immediate redirect
+    donationModal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Function to close modal
+function closeDonationModal() {
+    donationModal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+// Function to proceed to donation page
+function proceedToDonation() {
+    // Replace with your actual donation page URL
+    window.location.href = 'donate.html';
+}
+
+// Event listeners
+donateButtons.forEach(button => {
+    button.addEventListener('click', openDonationModal);
+});
+
+closeButton.addEventListener('click', closeDonationModal);
+cancelBtn.addEventListener('click', closeDonationModal);
+proceedBtn.addEventListener('click', proceedToDonation);
+
+// Close modal when clicking outside
+window.addEventListener('click', (event) => {
+    if (event.target === donationModal) {
+        closeDonationModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && donationModal.style.display === 'block') {
+        closeDonationModal();
+    }
+});
+
 
 
 
