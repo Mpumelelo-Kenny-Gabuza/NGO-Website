@@ -268,7 +268,7 @@ body {
 .hero_section {
     height: 85vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://login.sataac.co.za/wp-content/uploads/2021/11/bill-wegener-LqOO5Ko0zSo-unsplash-1.jpg');
+        url('/images/HeroImg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -972,7 +972,7 @@ NOT BASE SYLES !!!
 .banner {
     height: 34vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://brandsouthafrica.com/wp-content/uploads/2018/02/bsa-31-.jpeg');
+        url('/images/BannerImg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

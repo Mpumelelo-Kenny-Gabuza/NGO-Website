@@ -20,6 +20,8 @@ dropdowns.forEach(function (drop) {
   });
 });
 
+
+
 // Add interactivity to programme cards
 document.querySelectorAll('.program_card').forEach(card => {
   card.addEventListener('click', function () {
@@ -30,25 +32,23 @@ document.querySelectorAll('.program_card').forEach(card => {
 });
 
 // Add hover effect to programme links
-document.querySelectorAll('.programme-link').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.stopPropagation(); // Prevent triggering the card click event
-  });
-});
+// document.querySelectorAll('.programme-link').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     e.stopPropagation(); 
+//   });
+// });
 
 
 // Add button functionality
-document.querySelector('.btn-primary').addEventListener('click', function () {
-  alert('Thank you for your interest in donating to Manyana Mhlali Development! You will be redirected to our donation page.');
-  // In a real implementation, this would redirect to a donation page
-  window.location.href = '/donate.html';
-});
+// document.querySelector('.btn-primary').addEventListener('click', function () {
+//   alert('Thank you for your interest in donating to Manyana Mhlali Development! You will be redirected to our donation page.');
+//   window.location.href = '/donate.html';
+// });
 
-document.querySelector('.btn-secondary').addEventListener('click', function () {
-  alert('Thank you for your interest in getting involved with Manyana Mhlali Development! You will be redirected to our volunteer page.');
-  // In a real implementation, this would redirect to a volunteer page
-  // window.location.href = '/get-involved';
-});
+// document.querySelector('.btn-secondary').addEventListener('click', function () {
+//   alert('Thank you for your interest in getting involved with Manyana Mhlali Development! You will be redirected to our volunteer page.');
+//   window.location.href = '/get-involved';
+// });
 
 
 
@@ -56,11 +56,10 @@ document.querySelector('.btn-secondary').addEventListener('click', function () {
 
 
 // Add interactivity to the CTA button
-document.querySelector('.survivor_cta').addEventListener('click', function (e) {
-  e.preventDefault();
-  alert('Thank you for your courage! You will be redirected to our survivor support resources.');
-  // In a real implementation, this would redirect to survivor resources
-});
+// document.querySelector('.survivor_cta').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   alert('Thank you for your courage! You will be redirected to our survivor support resources.');
+// });
 
 // // Add subtle animation to floating elements
 // const elements = document.querySelectorAll('.floating-element');
@@ -88,21 +87,20 @@ document.querySelectorAll('.option_item').forEach(item => {
 });
 
 // Add click functionality to donate button
-document.querySelector('.donate_button').addEventListener('click', function (e) {
-  e.preventDefault();
-  alert('Thank you for your generosity! You will be redirected to our secure donation page.');
-  // In a real implementation, this would redirect to the donation page
-});
+// document.querySelector('.donate_button').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   alert('Thank you for your generosity! You will be redirected to our secure donation page.');
+// });
 
 // Video play/pause on click (optional)
-document.querySelector('.video_container').addEventListener('click', function () {
-  const video = this.querySelector('video');
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-});
+// document.querySelector('.video_container').addEventListener('click', function () {
+//   const video = this.querySelector('video');
+//   if (video.paused) {
+//     video.play();
+//   } else {
+//     video.pause();
+//   }
+// });
 
 // Newsletter form submission
     document.querySelector('.newsletter_form')?.addEventListener('submit', function(e) {

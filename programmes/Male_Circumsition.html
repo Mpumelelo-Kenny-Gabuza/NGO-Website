@@ -7,203 +7,8 @@
   <script src="https://kit.fontawesome.com/f35d4106a4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/styles/base_styles.css">
-  <title>Male Circumcision Program</title>
-
-  <style>
-    header {
-      height: 20vh;
-      background: linear-gradient(135deg, #1d364e 10%, #838181 100%);
-      background-size: cover;
-      background-position: bottom;
-      background-attachment: fixed;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 0 20px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      opacity: 0.9;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      text-align: center;
-      color: transparent;
-      -webkit-text-stroke-width: 2px;
-      /* Sets the width of the outline */
-      -webkit-text-stroke-color: #eceef0;
-      /* Sets the color of the outline */
-      /* Example font size for better visibility */
-      font-weight: bold;
-    }
-
-    /* header p {
-      margin-top: 10px;
-      font-size: 1rem;
-      color: #b2dfdb;
-    } */
-
-    .program-container {
-      width: 85%;
-      max-width: 950px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-    }
-
-    .accordion-item {
-      border-bottom: 1px solid #e0e0e0;
-      transition: all 0.3s ease;
-    }
-
-    .accordion-header {
-      background:  #2c3e50;
-      color: #fff;
-      cursor: pointer;
-      padding: 15px 25px;
-      font-size: 16px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: 0.3s;
-    }
-
-    .accordion-header:hover {
-      background:  #2c3e50;
-    }
-
-    .accordion-header .icon-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .accordion-header i:first-child {
-      font-size: 20px;
-      color: #e74c3c;
-      transition: transform 0.3s ease;
-    }
-
-    .accordion-header:hover i:first-child {
-      transform: scale(1.1);
-      color: #e74c3c;
-    }
-
-    .accordion-icon {
-      transition: transform 0.3s ease;
-      font-size: 14px;
-    }
-
-    .accordion-icon.rotate {
-      transform: rotate(90deg);
-    }
-
-    .accordion-content {
-      display: none;
-      background-color: #b4b3b3;
-      padding: 20px 25px;
-      line-height: 1.7;
-      font-size: 15px;
-      color: #444;
-      animation: fadeIn 0.4s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .accordion-item.active .accordion-header {
-      background:  #2c3e50;
-    }
-
-    /* Extra informational section */
-    .info-section {
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(90deg,  #2c3e50,  #4c5055);
-      color: #fff;
-    }
-
-    .info-section h2 {
-      margin-bottom: 10px;
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
-
-    .info-section p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #b2dfdb;
-    }
-
-    /* Highlight cards */
-    .highlights {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 40px 20px;
-      background-color: #f9f9f9;
-    }
-
-    .highlight-card {
-      background: #fff;
-      width: 250px;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      padding: 25px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .highlight-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .highlight-card i {
-      background:  #2c3e50;
-      color: #e74c3c;
-      font-size: 24px;
-      padding: 14px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      transition: 0.3s ease;
-    }
-
-    .highlight-card:hover i {
-      background:  #2c3e50;
-      color: #e74c3c;
-      transform: rotate(10deg);
-    }
-
-    .highlight-card h3 {
-      font-size: 1.1rem;
-      color:  #2c3e50;
-      margin-bottom: 10px;
-    }
-
-    .highlight-card p {
-      font-size: 0.9rem;
-      color: #666;
-      line-height: 1.5;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles/programmes_styles/male_circumsition.css">
+  <title>Safe Male Circumcision - Manyana Mhlali Development</title>
 </head>
 
 <body>
@@ -273,13 +78,136 @@
     </div>
   </div>
 
-  <header>
+  <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Safe Male Circumcision Programme</h1>
+            <p class="lead">Honoring Tradition, Ensuring Safety, Building Healthy Futures</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="container">
+            <h2>Respecting Culture, Protecting Health</h2>
+            <p>At Manyana Mhlali Development, we bridge the vital connection between respected traditional initiation practices and modern medical safety. Our programme ensures that this important rite of passage is conducted with the highest standards of health, safety, and cultural dignity.</p>
+            <p>We work closely with families, traditional leaders, and healthcare professionals to create a supportive environment where young men can undergo this tradition safely and return to their communities as healthy, respected members.</p>
+        </div>
+    </section>
+
+    <!-- Programme Pillars -->
+    <section class="pillars-section">
+        <div class="container">
+            <h2>Our Approach: Four Pillars of Safety</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">👑</div>
+                    <h3>Community Partnership</h3>
+                    <p>Working respectfully with traditional leaders and families to maintain cultural integrity while ensuring safety standards.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">⚕️</div>
+                    <h3>Medical Oversight</h3>
+                    <p>Qualified healthcare professionals provide medical screening, safe procedures, and post-procedure care.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">📚</div>
+                    <h3>Comprehensive Education</h3>
+                    <p>Teaching initiates about hygiene, health, responsibility, and what it means to become a man in our community.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌱</div>
+                    <h3>Leadership Development</h3>
+                    <p>Transforming initiates into responsible young leaders who contribute positively to their families and community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Why Safe Practices Matter</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card health-benefit">
+                    <h3>Health Benefits</h3>
+                    <ul>
+                        <li>Reduced risk of HIV and STI transmission</li>
+                        <li>Improved hygiene and personal care</li>
+                        <li>Lower risk of urinary tract infections</li>
+                        <li>Decreased chance of penile cancer</li>
+                        <li>Professional wound care and healing</li>
+                    </ul>
+                </div>
+                <div class="benefit-card cultural-benefit">
+                    <h3>Cultural & Personal Benefits</h3>
+                    <ul>
+                        <li>Preservation of important cultural traditions</li>
+                        <li>Meaningful rite of passage experience</li>
+                        <li>Community recognition and acceptance</li>
+                        <li>Enhanced self-esteem and identity</li>
+                        <li>Stronger connection to cultural heritage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <div class="container">
+            <h2>Our Safe Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div style="display: flex; align-items: center;">
+                        <div class="step-number">1</div>
+                        <h3>Community Engagement & Education</h3>
+                    </div>
+                    <p>We meet with families and traditional leaders to explain our health and safety protocols, ensuring everyone understands and supports the medically supervised approach.</p>
+                </div>
+                <div class="process-step">
+                    <div style="display: flex; align-items: center;">
+                        <div class="step-number">2</div>
+                        <h3>Health Screening & Preparation</h3>
+                    </div>
+                    <p>Each participant receives a thorough health screening to ensure they are medically fit for the procedure. We discuss what to expect and how to prepare.</p>
+                </div>
+                <div class="process-step">
+                    <div style="display: flex; align-items: center;">
+                        <div class="step-number">3</div>
+                        <h3>Safe Procedure & Monitoring</h3>
+                    </div>
+                    <p>Conducted in a clean, safe environment by trained healthcare professionals using sterile equipment and proper medical techniques.</p>
+                </div>
+                <div class="process-step">
+                    <div style="display: flex; align-items: center;">
+                        <div class="step-number">4</div>
+                        <h3>Aftercare & Support</h3>
+                    </div>
+                    <p>We provide comprehensive aftercare instructions, follow-up checks, and support throughout the healing process to prevent complications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Learn More or Get Involved?</h2>
+            <p>Whether you're a parent considering initiation for your son, a community leader interested in partnership, or a supporter who wants to help, we're here to answer your questions.</p>
+            <a href="../contact.html" class="btn-primary">Contact Us Today</a>
+        </div>
+    </section>
+
+
+  <!-- <header>
     <h1>Male Circumcision Program</h1>
     <p>Promoting Health, Culture, and Education Through Safe Initiation</p>
   </header>
 
   <section class="program-container">
-    <!-- SAFE INITIATION -->
+  
+
     <div class="accordion-item">
       <div class="accordion-header">
         <div class="icon-wrap">
@@ -296,7 +224,7 @@
       </div>
     </div>
 
-    <!-- TRADITIONAL PRACTICES -->
+    
     <div class="accordion-item">
       <div class="accordion-header">
         <div class="icon-wrap">
@@ -313,7 +241,7 @@
       </div>
     </div>
 
-    <!-- HEALTHY EDUCATION -->
+    
     <div class="accordion-item">
       <div class="accordion-header">
         <div class="icon-wrap">
@@ -331,7 +259,7 @@
     </div>
   </section>
 
-  <!-- INFORMATION SECTION -->
+  
   <section class="info-section">
     <h2>About the Program</h2>
     <p>
@@ -341,7 +269,7 @@
     </p>
   </section>
 
-  <!-- HIGHLIGHT CARDS -->
+  
   <section class="highlights">
     <div class="highlight-card">
       <i class="fa-solid fa-hands-helping"></i>
@@ -378,7 +306,7 @@
         who contribute positively to their communities.
       </p>
     </div>
-  </section>
+  </section> -->
 
   <footer class="site_footer">
     <div class="footer_container">
