@@ -1,5 +1,5 @@
 .about-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cloudfront-eu-central-1.images.arcpublishing.com/arenaholdings/JLSA6NSD4VKHTAR3GEJOZRMQDQ.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/AboutUs.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

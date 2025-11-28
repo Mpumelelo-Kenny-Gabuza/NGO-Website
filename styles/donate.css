@@ -10,12 +10,26 @@
 }
 
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542315099045-93937d70c67a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tbXVuaXR5JTIwc2VydmljZXxlbnwwfHwwfHx8MA%3D%3D');
+    height: 35vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/DonatePic.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
+}
+
+.hero-section h1{
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    opacity: 0.9;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    /* text-align: center; */
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: bold;
 }
 
 .impact-section {
